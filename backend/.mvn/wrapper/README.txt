@@ -1,0 +1,1 @@
+The wrapper scripts download maven-wrapper.jar from Maven Central on first run (internet required). The JAR is intentionally not included in this source ZIP. Alternatively install Maven and run `mvn spring-boot:run`.
