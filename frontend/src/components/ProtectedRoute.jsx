@@ -1,2 +1,0 @@
-import {Navigate,useLocation} from 'react-router-dom';
-export default function ProtectedRoute({children,admin=false}){let user=null;try{user=JSON.parse(localStorage.getItem('shopUser')||'null')}catch{}const location=useLocation();if(!user||!localStorage.getItem('shopToken'))return <Navigate to="/login" state={{from:location}} replace/>;if(admin&&user.role!=='ADMIN')return <Navigate to="/" replace/>;return children;}
